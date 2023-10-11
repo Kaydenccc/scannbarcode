@@ -39,11 +39,11 @@ export default function DashboardSis() {
         const dataHadir = await axios.get('https://apotikk.000webhostapp.com/api/absens', {
           headers: {
             'Content-Type': 'application/json',
-            Authorization: 'Bearer 1|tM2yiOpajCcYHGLw58WjM60KTgt0GfxfKZMMMHu0',
+            Authorization: 'Bearer 95|BjIXnbIKBwRUu44SKvgW2zRg6w4FzhS5stpAtUtt',
           },
         });
         setKehadiran(dataHadir.data);
-        const tgl = new Date(dataHadir.data.updated_at);
+        // const tgl = new Date(dataHadir.data.updated_at);
       } catch (err) {
         throw err;
       }

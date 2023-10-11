@@ -1,4 +1,3 @@
-'use client';
 import './globals.css';
 import { ThemeProvider } from '@material-tailwind/react';
 

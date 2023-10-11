@@ -36,7 +36,7 @@ export default function DashboardSis() {
   useEffect(() => {
     const funcCall = async () => {
       try {
-        const dataHadir = await axios.get('http://127.0.0.1:8000/api/absens', {
+        const dataHadir = await axios.get('https://apotikk.000webhostapp.com/api/absens', {
           headers: {
             'Content-Type': 'application/json',
             Authorization: 'Bearer 1|tM2yiOpajCcYHGLw58WjM60KTgt0GfxfKZMMMHu0',

@@ -23,7 +23,7 @@ export default function SimpleRegistrationForm() {
     try {
       // const res = await axiosInstance.post('/login', userLogin);
 
-      const res = await fetch('https://fc0qw89g-8000.asse.devtunnels.ms/api/login', {
+      const res = await fetch('https://apotikk.000webhostapp.com/api/login', {
         method: 'post',
         body: JSON.stringify(userLogin),
         headers: {

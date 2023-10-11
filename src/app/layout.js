@@ -1,5 +1,5 @@
+import Contianer from './Contianer';
 import './globals.css';
-import { ThemeProvider } from '@material-tailwind/react';
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="container mx-auto">
-        <ThemeProvider>{children}</ThemeProvider>
+        <Contianer>{children}</Contianer>
       </body>
     </html>
   );

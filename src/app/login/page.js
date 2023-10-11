@@ -19,14 +19,9 @@ export default function SimpleRegistrationForm() {
 
   async function login(e) {
     e.preventDefault();
-    console.log('login');
+    console.log(userLogin);
     try {
-      const res = await axiosInstance.post('/login', userLogin, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-        },
-      });
+      const res = await axiosInstance.post('/login', userLogin);
 
       // const res = fetch('https://apotikk.000webhostapp.com/api/login', {
       //   method: 'post',
@@ -45,7 +40,7 @@ export default function SimpleRegistrationForm() {
       //   .catch((err) => {
       //     return err;
       //   });
-      console.log(res);
+      console.log('RESPONSE = ', res);
       setCookie('token', res.data, 1);
       alert(res.data);
       navigation.push('/');

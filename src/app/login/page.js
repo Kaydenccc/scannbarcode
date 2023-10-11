@@ -21,25 +21,23 @@ export default function SimpleRegistrationForm() {
     e.preventDefault();
     console.log(userLogin);
     try {
-      const res = await axiosInstance.post('/login', userLogin);
+      // const res = await axiosInstance.post('/login', userLogin);
 
-      // const res = fetch('https://apotikk.000webhostapp.com/api/login', {
-      //   method: 'post',
-      //   body: JSON.stringify(userLogin),
-      //   headers: {
-      //     'Access-Control-Allow-Origin': '*',
-      //   },
-      // })
-      //   .then((res) => {
-      //     return res.json();
-      //   })
-      //   .then((res) => {
-      //     console.log('RESPONSE', res);
-      //     return res;
-      //   })
-      //   .catch((err) => {
-      //     return err;
-      //   });
+      const res = await fetch('https://fc0qw89g-8000.asse.devtunnels.ms/api/login', {
+        method: 'post',
+        body: JSON.stringify(userLogin),
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+        credentials: 'include',
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .catch((err) => {
+          throw err;
+        });
       console.log('RESPONSE = ', res);
       setCookie('token', res.data, 1);
       alert(res.data);
